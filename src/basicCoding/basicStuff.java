@@ -15,6 +15,23 @@ public class basicStuff {
 			map.put(key, map.getOrDefault(key, 0) + 1);
 		}
 		scanner.close();
+
+		System.out.println("The unique numbers are:");
+		for (Integer key: map.keySet()) {
+			System.out.println(key);
+		}
+
+		for (Integer key: map.keySet()) {
+			Integer value = map.get(key);
+			System.out.println("The number " + key + " is met " + value + " number of times");
+		}
+
+		System.out.println("The numbers that were met only once are:");
+		for (Integer key: map.keySet()) {
+			if(map.get(key) == 1) {
+			System.out.println(key);
+			}
+		}
 	}
 
 }
