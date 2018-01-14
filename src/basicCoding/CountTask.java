@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class CountTask {
 
-	public static HashMap<Integer, Integer> readFile(String fname) throws Exception {
+	public HashMap<Integer, Integer> readFile(String fname) throws Exception {
 		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 		Scanner scanner = null;
 		Integer key;
@@ -37,21 +37,21 @@ public class CountTask {
 		return map;
 	}
 	
-	public static void printUniqueNumbers(HashMap<Integer, Integer> map){
+	public void printUniqueNumbers(HashMap<Integer, Integer> map){
 		System.out.println("The unique numbers are:");
 		for (Integer key: map.keySet()) {
 			System.out.println(key);
 		}
 	}
 	
-	public static void printNumbersOccurance(HashMap<Integer, Integer> map){
+	public void printNumbersOccurance(HashMap<Integer, Integer> map){
 		for (Integer key: map.keySet()) {
 			Integer value = map.get(key);
 			System.out.println("The number " + key + " is met " + value + " number of times");
 		}
 	}
 	
-	public static void printOccuredOnce(HashMap<Integer, Integer> map) {
+	public void printOccuredOnce(HashMap<Integer, Integer> map) {
 		System.out.println("The numbers that were met only once are:");
 		for (Integer key: map.keySet()) {
 			if(map.get(key) == 1) {

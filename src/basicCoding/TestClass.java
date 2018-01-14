@@ -6,15 +6,16 @@ import basicCoding.CountTask;
 public class TestClass {
 
 	public static void main(String[] args) {
+		CountTask count = new CountTask();
 		HashMap<Integer, Integer> map = null;
 		try {
-			map = CountTask.readFile("text.txt");
+			map = count.readFile("text.txt");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		CountTask.printUniqueNumbers(map);
-		CountTask.printNumbersOccurance(map);
-		CountTask.printOccuredOnce(map);
+		count.printUniqueNumbers(map);
+		count.printNumbersOccurance(map);
+		count.printOccuredOnce(map);
 	}
 
 }
